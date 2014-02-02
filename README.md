@@ -76,6 +76,8 @@ copy at least the <tt>fw/</tt> folder and put it into <tt>mysite/</tt>.
 Optionally, you can also copy the <tt>Makefile</tt> and the
 <tt>templates/</tt> folder from that same archive.
 
+Note that **php-yaml** has to be installed. See: https://code.google.com/p/php-yaml/wiki/InstallingWithPecl
+
 ### Step 1: write content
 
 Write a set of files in [Markdown syntax](http://daringfireball.net/projects/markdown/syntax)
