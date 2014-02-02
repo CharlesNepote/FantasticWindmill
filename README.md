@@ -52,6 +52,18 @@ time some content changes, and uploads to the web server only the HTML files
 that have been modified. It turns out that this process is adequate to
 maintain many a web site.
 
+<!-- ## Why use Fantastic Windmill?
+
+FW has some features not very common in other static generators:
+* manage multi-languages
+* user-defined metadata
+* choice for metadata place (.yaml or at the botom of .md files)
+* .md file format compatible with Jekill
+* no framework
+* Content structure = output structure
+-->
+
+
 <a name="quickstart"></a>
 
 ## Quick start
@@ -112,7 +124,7 @@ to render different pages.
 From the <tt>mysite/</tt> folder, call
 
 <pre>
-php lib/fw.php
+php fw/fw.php
 </pre>
 
 FW will process each input file in the <tt>mysite/contents/</tt> folder
@@ -314,14 +326,11 @@ those external files must be separated from the page and put into some other
 ("static") folder. This makes using each page as a stand-alone document
 difficult.
 
-<!--
-
 FW applies the "[don't repeat
 yourself](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself)" principle. There is probably a reason why you place a file in
 some folder and give it some name. Therefore, FW's output folder always
 mirrors the structure and names of the input folder.
 
--->
 
 ### User-defined metadata
 
@@ -330,14 +339,11 @@ page (e.g. date, author, title). In addition, this metadata is hard-coded
 into the tool, which generally won't let you add any other parameter
 you might want to use in your templates.
 
-<!--
-
 In FW, a page's metadata can have any structure you wish: anything
 that can be written in [YAML](http://www.yaml.org/) can be
 attached to a page and queried by any template. There is no
 set of predefined parameters, and pages need not have the same parameters.
 
--->
 
 ### Flexible location for page metadata
 
@@ -352,8 +358,6 @@ be shared between e.g. all pages of the same folder. Hence if all pages in
 a folder have the same author, the author field must be repeated in all the
 input files.
 
-<!--
-
 In FW, a page's metadata can be put in three locations:
 
 1.  At the _end_ of the source file (rather than at the beginning);
@@ -364,7 +368,7 @@ file for it to be used in the web site
 3.  In a file called <tt>_.yaml</tt>. All pages in the same directory
 inherit from the metadata present in that file (if present), unless overriden
 by declarations 1 or 2 (again, don't repeat yourself)
--->
+
 
 ### PHP as the template engine
 
@@ -377,15 +381,12 @@ straightforward templates next to impossible to write --for example, listing
 up to 5 blog entries with the same ID, but a different language as the
 current page, sorted by author name. 
 
-<!--
-
 In FW, a template is anything you can write in PHP. You can create
 variables and objects, call whatever function is available in the language,
 use whatever construct you wish (loops, switches, you name it) or include
 any other PHP file within your template file. Similarly, each template can
 access the metadata of _all_ the site's pages, giving you complete
 flexibility on the processing of what you want to display.
- -->
 
 <a name="about"></a>
 
